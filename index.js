@@ -5,7 +5,6 @@ var MongoClient = require('mongodb').MongoClient
 
 app.use(bodyParser.json());
 
-
 MongoClient.connect('mongodb://demoUser:gama@ds023490.mlab.com:23490/demo', function (err, db) {
     if (err) throw err
 
