@@ -10,7 +10,7 @@ MongoClient.connect('mongodb://demoUser:gama@ds155490.mlab.com:55490/demo', func
 
     require('./routes/user.routes')(app, db)
 
-    app.listen(3000, function () {
+    app.listen(process.env.PORT || 3000, function () {
         console.log('Example app listening on port 3000!')
     })
 
