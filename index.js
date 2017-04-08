@@ -18,8 +18,18 @@ app.get('/', function (req, res) {
 })
 
 app.post('/', function (req, res) {
-    console.log(req.body);
-    res.json(req.body.teste + 1);
+
+    var collection = db.collection("teste");
+
+    collection.save(req.body)
+        .then(function (result) {
+            res.json(result);
+        }).catch(function (error) {
+            console.log(error)
+            res.status(500).send(error)
+
+        });
+
 })
 
 app.put('/user', function (req, res) {
