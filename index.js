@@ -5,7 +5,7 @@ var MongoClient = require('mongodb').MongoClient
 
 app.use(bodyParser.json());
 
-MongoClient.connect('mongodb://demoUser:gama@ds023490.mlab.com:23490/demo', function (err, db) {
+MongoClient.connect('mongodb://demoUser:gama@ds155490.mlab.com:55490/demo', function (err, db) {
     if (err) throw err
 
     require('./routes/user.routes')(app, db)
